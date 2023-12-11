@@ -193,7 +193,7 @@ function _installer_theme_system_to_user_specification() {
 	# Blur the .png
 	convert ./minegrub-theme/minegrub/background.png -blur 0x8 ./minegrub-theme/minegrub/background.png
 	# Copy the theme files
-	sudo cp --recursive --update --verbose ./minegrub-theme/minegrub /boot/grub/themes
+	sudo cp --recursive --update --verbose ./minegrub-theme/minegrub /boot/grub/themes/
 	# Copy the systemd service file
 	sudo cp ./minegrub-theme/minegrub-update.service /etc/systemd/system
 	# Edit /etc/default/grub configuration file
