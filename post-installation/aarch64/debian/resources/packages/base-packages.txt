@@ -151,3 +151,4 @@ xfsprogs
 xz-utils
 zenity
 zip
+grub-common
