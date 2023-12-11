@@ -116,6 +116,9 @@ function _installer_install_all_packages() {
 
 # Configures the evenrioemnt after installing packages
 function _installer_configure_environment_post_installation() {
+	# Nuke, and I mean NUKE desktop-base GRUB configuration
+	sudo rm --recursive --force /etc/grub.d/05_debian_theme
+
 	# Copy over all files under /resources/udev
 	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/udev/*.rules /etc/udev/rules.d
 
