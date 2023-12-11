@@ -197,7 +197,7 @@ function _installer_theme_system_to_user_specification() {
 	# Copy the systemd service file
 	sudo cp ./minegrub-theme/minegrub-update.service /etc/systemd/system
 	# Edit /etc/default/grub configuration file
-	echo "GRUB_THEME="/boot/grub/themes/minegrub/theme.txt"" | tee --append /etc/default/grub
+	echo "GRUB_THEME="/boot/grub/themes/minegrub/theme.txt"" | sudo tee --append /etc/default/grub
 	# Re-generate grub configuration
 	sudo grub-mkconfig --output /boot/grub/grub.cfg
 	# Enable Minegrub systemd service

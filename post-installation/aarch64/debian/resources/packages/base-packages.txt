@@ -63,6 +63,7 @@ gnome-user-share
 gnome-weather
 graphicsmagick-imagemagick-compat
 grilo-plugins-0.3
+grub-common
 gstreamer1.0-gl
 gstreamer1.0-libav
 gstreamer1.0-libcamera
@@ -151,4 +152,3 @@ xfsprogs
 xz-utils
 zenity
 zip
-grub-common
