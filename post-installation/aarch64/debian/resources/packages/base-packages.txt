@@ -1,4 +1,5 @@
 accountsservice
+acpi-call-dkms
 adb
 android-sdk-platform-tools-common
 apt-config-icons-hidpi
@@ -95,6 +96,7 @@ libqmi-utils
 librsvg2-common
 libspa-0.2-bluetooth
 libva2
+linux-cpupower
 lzip
 lzop
 malcontent
@@ -125,6 +127,9 @@ steam-devices
 system-config-printer
 system-config-printer-common
 system-config-printer-udev
+tlp
+tlp-rdw
+tp-smapi-dkms
 tracker-miner-fs
 tumbler
 udev

@@ -80,6 +80,9 @@ function _installer_install_gnome_desktop_environment() {
 
 # Configures the environment for installation
 function _installer_configure_environment_for_installation() {
+	# Add ignore list of packages
+	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/apt/* /etc/apt/preferences.d/
+
 	# Refresh the package list
 	sudo apt-get --assume-yes --show-progress \
 	--no-install-recommends --no-install-suggests \

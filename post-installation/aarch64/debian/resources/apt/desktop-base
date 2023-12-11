@@ -1,0 +1,3 @@
+Package: desktop-base
+Pin: origin ""
+Pin-Priority: -1

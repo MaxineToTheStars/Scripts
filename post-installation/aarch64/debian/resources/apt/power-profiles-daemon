@@ -1,0 +1,3 @@
+Package: power-profiles-daemon
+Pin: origin ""
+Pin-Priority: -1
