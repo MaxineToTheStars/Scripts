@@ -1,4 +1,4 @@
 Explanation: unneeded bloatware that conflicts with tlp
 Package: power-profiles-daemon
-Pin: release n=xenial*
+Pin: release *
 Pin-Priority: -1

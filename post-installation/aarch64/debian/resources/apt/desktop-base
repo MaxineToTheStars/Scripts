@@ -1,4 +1,4 @@
 Explanation: unneeded bloatware
 Package: desktop-base
-Pin: release n=xenial*
+Pin: release *
 Pin-Priority: -1
