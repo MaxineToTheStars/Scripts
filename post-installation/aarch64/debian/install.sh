@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Fail on error
+set -e
+
 # File Docstring
 # --------------
 # Installs the GNOME Desktop Environment on Debian systems. The selected packages are
