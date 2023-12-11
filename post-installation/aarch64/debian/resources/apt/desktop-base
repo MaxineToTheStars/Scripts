@@ -1,3 +1,4 @@
+Explanation: unneeded bloatware
 Package: desktop-base
-Pin: origin ""
+Pin: release n=xenial*
 Pin-Priority: -1

@@ -87,8 +87,8 @@ function _installer_configure_environment_for_installation() {
 	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/apt/* /etc/apt/preferences.d/
 
 	# Refresh the package list
-	sudo apt-get --assume-yes --show-progress \
-	--no-install-recommends --no-install-suggests \
+	sudo apt-get --assume-yes --no-install-recommends \
+	--no-install-suggests \
 	update
 
 	# Update the base system
@@ -101,7 +101,7 @@ function _installer_configure_environment_for_installation() {
 # Installs all packages (Native .deb and Flatpak)
 function _installer_install_all_packages() {
 	# Install native packages
-	sudo apt-get --assume-yes --verbose-version \
+	sudo apt-get --assume-yes --verbose-versions \
 	--show-progress --no-install-recommends \
 	--no-install-suggests \
 	install $(awk '{print $1}' $CONSTANT_DIRECTORY_RESOURCES/packages/base-packages.txt)
