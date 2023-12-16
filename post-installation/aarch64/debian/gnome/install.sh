@@ -107,7 +107,7 @@ function _installer_install_all_packages() {
 	install $(awk '{print $1}' $CONSTANT_DIRECTORY_RESOURCES/packages/base-packages.txt)
 
 	# Install packages from other remotes
-	bash $(awk '{print $1}' $CONSTANT_DIRECTORY_RESOURCES/apt-remotes/*.sh)
+	bash $CONSTANT_DIRECTORY_RESOURCES/apt-remotes/*.sh
 
 	# Configure Flatpak
 	echo $(flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo)
