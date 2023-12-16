@@ -1,0 +1,52 @@
+# Web Browsers
+org.gnome.Epiphany
+com.github.Eloston.UngoogledChromium
+
+# Security
+org.gnome.World.Secrets
+com.belmoussaoui.Authenticator
+
+# Development
+org.godotengine.Godot
+com.visualstudio.code
+io.github.shiftey.Desktop
+org.thonny.Thonny
+
+# Gaming
+org.prismlauncher.PrismLauncher
+
+# Streaming
+app.moosync.moosync
+cafe.avery.Delfin
+
+# Video and Audio
+org.videolan.VLC
+com.vixalien.decibels
+io.github.seadve.Kooha
+org.pitivi.Pitivi
+org.tenacityaudio.Tenacity
+org.gnome.gitlab.YaLTeR.VideoTrimmer
+
+# Graphics
+org.gimp.GIMP
+io.github.nate_xyz.Paleta
+com.github.maoschanz.drawing
+com.github.finefindus.eyedropper
+
+# Communication
+dev.geopjr.Tuba
+org.gnome.Fractal
+xyz.armcord.ArmCord
+org.gnome.Geary
+
+# Misc
+net.nokyan.Resources
+me.timschneeberger.GalaxyBudsClient
+ca.desrt.dconf-editor
+net.nokyan.Resources
+
+# Libs
+org.freedesktop.Sdk.Extension.node18
+org.freedesktop.Sdk.Extension.openjdk11
+org.freedesktop.Sdk.Extension.rust-stable
+org.freedesktop.Platform.VulkanLayer.MangoHud

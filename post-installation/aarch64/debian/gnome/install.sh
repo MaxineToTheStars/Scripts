@@ -9,7 +9,7 @@ set -e
 # meant for AArch64 devices. Tested on ThinkPad X13s Gen 1
 #
 # Author: https://github.com/MaxineToTheStars
-# Last Updated On: 11/12/23
+# Last Updated On: 16/12/23
 # -----------------------------------------------------------------------------------
 
 # Constants
@@ -84,7 +84,7 @@ function _installer_install_gnome_desktop_environment() {
 # Configures the environment for installation
 function _installer_configure_environment_for_installation() {
 	# Add ignore list of packages
-	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/apt/* /etc/apt/preferences.d/
+	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/apt-pin/* /etc/apt/preferences.d/
 
 	# Refresh the package list
 	sudo apt-get --assume-yes --no-install-recommends \
@@ -106,6 +106,9 @@ function _installer_install_all_packages() {
 	--no-install-suggests \
 	install $(awk '{print $1}' $CONSTANT_DIRECTORY_RESOURCES/packages/base-packages.txt)
 
+	# Install packages from other remotes
+	bash $(awk '{print $1}' $CONSTANT_DIRECTORY_RESOURCES/apt-remotes/*.sh)
+
 	# Configure Flatpak
 	echo $(flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo)
 
@@ -122,8 +125,14 @@ function _installer_configure_environment_post_installation() {
 	# Copy over all files under /resources/udev
 	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/udev/*.rules /etc/udev/rules.d
 
+	# Copy over TLP configuration
+	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/tlp/tlp.conf /etc/tlp.conf
+
 	# Configure Avahi NSS
 	sudo sed --in-place "s|^hosts:.*|hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns|" /etc/nsswitch.conf
+
+	# Add/Configure bash aliases
+	echo 'alias code="flatpak run com.visualstudio.code"' >> $HOME/.bashrc
 
 	# GNOME GSettings
 	# Mutter
