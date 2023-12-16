@@ -1,52 +1,43 @@
-# Web Browsers
-org.gnome.Epiphany
-com.github.Eloston.UngoogledChromium
-
-# Security
-org.gnome.World.Secrets
-com.belmoussaoui.Authenticator
-
-# Development
-org.godotengine.Godot
-com.visualstudio.code
-io.github.shiftey.Desktop
-org.thonny.Thonny
-
-# Gaming
-org.prismlauncher.PrismLauncher
-
-# Streaming
 app.moosync.moosync
+
+ca.desrt.dconf-editor
+
 cafe.avery.Delfin
 
-# Video and Audio
-org.videolan.VLC
-com.vixalien.decibels
-io.github.seadve.Kooha
-org.pitivi.Pitivi
-org.tenacityaudio.Tenacity
-org.gnome.gitlab.YaLTeR.VideoTrimmer
-
-# Graphics
-org.gimp.GIMP
-io.github.nate_xyz.Paleta
-com.github.maoschanz.drawing
+com.belmoussaoui.Authenticator
+com.github.Eloston.UngoogledChromium
 com.github.finefindus.eyedropper
+com.github.maoschanz.drawing
+com.github.tchx84.Flatseal
+com.mattjakeman.ExtensionManager
+com.visualstudio.code
+com.vixalien.decibels
 
-# Communication
 dev.geopjr.Tuba
-org.gnome.Fractal
-xyz.armcord.ArmCord
-org.gnome.Geary
 
-# Misc
-net.nokyan.Resources
+io.github.nate_xyz.Paleta
+io.github.seadve.Kooha
+io.github.shiftey.Desktop
+
 me.timschneeberger.GalaxyBudsClient
-ca.desrt.dconf-editor
+
 net.nokyan.Resources
 
-# Libs
+org.freedesktop.Platform.VulkanLayer.MangoHud
 org.freedesktop.Sdk.Extension.node18
 org.freedesktop.Sdk.Extension.openjdk11
 org.freedesktop.Sdk.Extension.rust-stable
-org.freedesktop.Platform.VulkanLayer.MangoHud
+org.gimp.GIMP
+org.gnome.Epiphany
+org.gnome.Fractal
+org.gnome.Geary
+org.gnome.World.Secrets
+org.gnome.gitlab.YaLTeR.VideoTrimmer
+org.godotengine.Godot
+org.pitivi.Pitivi
+org.prismlauncher.PrismLauncher
+org.tenacityaudio.Tenacity
+org.thonny.Thonny
+org.videolan.VLC
+
+xyz.armcord.ArmCord

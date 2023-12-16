@@ -57,7 +57,7 @@ function _ui_show_user_installation_type_prompt() {
 	if [[ "${userSelection}" == "1" ]]; then
 		_installer_install_gnome_desktop_environment
 		elif [[ "${userSelection}" == "2" ]]; then
-		_utils_print_to_console $userSelection
+		_extensions_configure_extensions
 		elif [[ "${userSelection}" == "3" ]]; then
 		_utils_print_to_console $userSelection
 	fi
@@ -278,6 +278,43 @@ function _installer_finalize_system_installation() {
 
 	# Show done message
 	_utils_print_to_console "Done!"
+}
+
+function _extensions_configure_extensions() {
+	# Configure widgets@aylur
+	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.aylurs-widgets.gschema.xml $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
+	# Compile gschema
+	glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
+	# Reset the extension
+	dconf reset -f /org/gnome/shell/extensions/aylurs-widgets/
+
+	# Configure just-perfection-desktop@just-perfection extension
+	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.just-perfection.gschema.xml $HOME/.local/share/gnome-shell/extensions/just-perfection-desktop@just-perfection/schemas
+	# Compile gschema
+	glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/just-perfection-desktop@just-perfection/schemas
+	# Reset the extension
+	dconf reset -f /org/gnome/shell/extensions/just-perfection/
+
+	# Configure Vitals@CoreCoding.com extension
+	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.vitals.gschema.xml $HOME/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com/schemas
+	# Compile gschema
+	glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com/schemas
+	# Reset the extension
+	dconf reset -f /org/gnome/shell/extensions/vitals/
+
+	# Configure dash-to-dock@micgx.gmail.com
+	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.dash-to-dock.gschema.xml $HOME/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/schemas
+	# Compile gschema
+	glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/schemas
+	# Reset the extension
+	dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+
+	# Configure blur-my-shell@aunetx
+	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.blur-my-shell.gschema.xml $HOME/.local/share/gnome-shell/extensions/blur-my-shell@aunetx/schemas
+	# Compile gschema
+	glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/blur-my-shell@aunetx/schemas
+	# Reset the extension
+	dconf reset -f /org/gnome/shell/extensions/blur-my-shell/
 }
 
 # Executer
