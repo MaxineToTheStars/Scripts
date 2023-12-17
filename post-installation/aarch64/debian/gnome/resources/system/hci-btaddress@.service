@@ -1,0 +1,6 @@
+[Unit]
+Description=HCI bluetooth address fix
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c 'sleep 5 && yes | btmgmt -i %I public-addr F4:A8:0D:BB:ED:78'

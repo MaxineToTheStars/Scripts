@@ -120,13 +120,16 @@ function _installer_install_all_packages() {
 	$(awk '{print $1}' $CONSTANT_DIRECTORY_RESOURCES/packages/flatpak-packages.txt)
 }
 
-# Configures the evenrioemnt after installing packages
+# Configures the environment after installing packages
 function _installer_configure_environment_post_installation() {
 	# Nuke, and I mean NUKE desktop-base GRUB configuration
 	sudo rm --recursive --force /etc/grub.d/05_debian_theme
 
 	# Copy over all files under /resources/udev
 	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/udev/*.rules /etc/udev/rules.d
+
+	# Copy over all files under /resources/system
+	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/system/*.rules /lib/systemd/system/
 
 	# Copy over TLP configuration
 	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/tlp/tlp.conf /etc/tlp.conf
