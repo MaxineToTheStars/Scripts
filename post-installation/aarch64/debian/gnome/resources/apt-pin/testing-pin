@@ -1,0 +1,4 @@
+Package: *
+Pin: release a=testing
+Pin-Priority: 100
+Explanation: Don't use Trixie(Testing) unless specified

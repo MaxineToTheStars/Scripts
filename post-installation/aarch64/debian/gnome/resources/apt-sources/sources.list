@@ -1,0 +1,11 @@
+# Sid (Unstable)
+deb http://deb.debian.org/debian/ sid main non-free-firmware
+deb-src http://deb.debian.org/debian/ sid main non-free-firmware
+
+# Trixie (Testing)
+deb http://deb.debian.org/debian/ trixie main non-free-firmware
+deb-src http://deb.debian.org/debian/ trixie main non-free-firmware
+
+# Security updates not needed in an Unstable/Testing system
+# :3
+

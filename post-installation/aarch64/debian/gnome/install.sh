@@ -86,6 +86,9 @@ function _installer_configure_environment_for_installation() {
 	# Add ignore list of packages
 	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/apt-pin/* /etc/apt/preferences.d/
 
+	# Copy over custom sources.list file
+	sudo cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/apt-sources/* /etc/apt/sources.list
+
 	# Refresh the package list
 	sudo apt-get --assume-yes --no-install-recommends \
 	--no-install-suggests \
@@ -281,13 +284,6 @@ function _installer_finalize_system_installation() {
 }
 
 function _extensions_configure_extensions() {
-	# # Configure widgets@aylur
-	# cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.aylurs-widgets.gschema.xml $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
-	# # Compile gschema
-	# glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
-	# # Reset the extension
-	# dconf reset -f /org/gnome/shell/extensions/aylurs-widgets/
-
 	# Configure just-perfection-desktop@just-perfection extension
 	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.just-perfection.gschema.xml $HOME/.local/share/gnome-shell/extensions/just-perfection-desktop@just-perfection/schemas
 	# Compile gschema

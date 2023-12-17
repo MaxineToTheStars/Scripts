@@ -1,0 +1,4 @@
+Package: *
+Pin: release a=unstable
+Pin-Priority: 1000
+Explanation: Prefer Sid(Unstable) over Trixie(Testing)

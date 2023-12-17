@@ -1,4 +1,4 @@
-Explanation: unneeded bloatware that conflicts with tlp
 Package: power-profiles-daemon
 Pin: release *
 Pin-Priority: -1
+Explanation: unneeded bloatware that conflicts with tlp
