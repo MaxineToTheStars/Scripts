@@ -281,12 +281,12 @@ function _installer_finalize_system_installation() {
 }
 
 function _extensions_configure_extensions() {
-	# Configure widgets@aylur
-	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.aylurs-widgets.gschema.xml $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
-	# Compile gschema
-	glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
-	# Reset the extension
-	dconf reset -f /org/gnome/shell/extensions/aylurs-widgets/
+	# # Configure widgets@aylur
+	# cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.aylurs-widgets.gschema.xml $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
+	# # Compile gschema
+	# glib-compile-schemas $HOME/.local/share/gnome-shell/extensions/widgets@aylur/schemas
+	# # Reset the extension
+	# dconf reset -f /org/gnome/shell/extensions/aylurs-widgets/
 
 	# Configure just-perfection-desktop@just-perfection extension
 	cp --recursive --update --verbose $CONSTANT_DIRECTORY_RESOURCES/extensions/org.gnome.shell.extensions.just-perfection.gschema.xml $HOME/.local/share/gnome-shell/extensions/just-perfection-desktop@just-perfection/schemas

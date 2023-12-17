@@ -3,6 +3,8 @@ acpi-call-dkms
 adb
 android-sdk-platform-tools-common
 apt-config-icons-hidpi
+apt-listbugs
+apt-listchanges
 at-spi2-core
 avahi-autoipd
 avahi-daemon
