@@ -2,6 +2,7 @@ accountsservice
 acpi
 acpi-call-dkms
 adb
+alsa-ucm-conf
 android-sdk-platform-tools-common
 apt-config-icons-hidpi
 apt-listbugs
@@ -118,6 +119,7 @@ nftables
 ntfs-3g
 openssl
 ovmf
+pd-mapping
 pipewire
 pipewire-audio
 pipewire-pulse
