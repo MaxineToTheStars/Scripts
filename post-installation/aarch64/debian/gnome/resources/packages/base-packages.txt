@@ -1,4 +1,5 @@
 accountsservice
+acpi
 acpi-call-dkms
 adb
 android-sdk-platform-tools-common
@@ -30,6 +31,8 @@ evince
 evolution-data-server
 exfatprogs
 file-roller
+firmware-atheros
+firmware-qcom-soc
 flatpak
 fprintd
 fwupd
@@ -122,8 +125,10 @@ pkexec
 polkitd
 poppler-data
 printer-driver-cups-pdf
+protection-domain-mapper
 python3-pil
 qemu-system-x86
+qrtr-tools
 rygel
 shared-mime-info
 simple-scan
